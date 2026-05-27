@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог — MA BELLE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+  </head>
+  <body>
+    <!-- Вход -->
+    <div id="loginView" class="adm-login-wrap">
+      <form id="loginForm" class="adm-login-box">
+        <img src="images/logo.png" alt="" width="72" height="72" class="adm-login-logo" />
+        <h1>MA BELLE</h1>
+        <p class="adm-lead">Вход в управление каталогом</p>
+        <label class="adm-field">
+          <span>Пароль</span>
+          <input type="password" id="loginPassword" required autocomplete="current-password" />
+        </label>
+        <p class="adm-error" id="loginError" hidden></p>
+        <button type="submit" class="adm-submit">Войти</button>
+        <a href="index.html" class="adm-login-back">← На сайт</a>
+      </form>
+    </div>
+
+    <div id="adminView" hidden>
+      <header class="adm-header">
+        <a href="index.html" class="adm-logo">
+          <img src="images/logo.png" alt="" width="44" height="44" />
+          <span>
+            <strong>MA BELLE</strong>
+            <em>каталог</em>
+          </span>
+        </a>
+        <div class="adm-header__right">
+          <a href="index.html" target="_blank" class="adm-link-site">Сайт ↗</a>
+          <button type="button" class="adm-logout" id="logoutBtn">Выйти</button>
+        </div>
+      </header>
+
+      <main class="adm-main">
+        <section class="adm-add">
+          <div class="adm-tabs">
+            <button type="button" class="adm-tab active" data-tab="single">Одна вещь</button>
+            <button type="button" class="adm-tab" data-tab="pack">Образ (пак, как на сайте)</button>
+          </div>
+
+          <!-- Одна вещь -->
+          <div id="tabSingle" class="adm-tab-panel">
+            <p class="adm-lead">Название, цена и одно фото</p>
+            <form id="addForm" class="adm-form">
+              <label class="adm-drop" id="dropZone">
+                <input type="file" id="photoInput" accept="image/*" hidden />
+                <div class="adm-drop__inner" id="dropPreview">
+                  <span class="adm-drop__icon">+</span>
+                  <span class="adm-drop__text">Фото вещи</span>
+                </div>
+              </label>
+              <div class="adm-fields">
+                <label class="adm-field">
+                  <span>Название</span>
+                  <input type="text" id="itemName" placeholder="Платье с розами" required />
+                </label>
+                <label class="adm-field adm-field--short">
+                  <span>Цена, ₽</span>
+                  <input type="number" id="itemPrice" min="0" step="100" placeholder="5900" />
+                </label>
+              </div>
+              <button type="submit" class="adm-submit" id="submitBtn">Добавить в каталог</button>
+            </form>
+          </div>
+
+          <!-- Образ / пак -->
+          <div id="tabPack" class="adm-tab-panel" hidden>
+            <p class="adm-lead">
+              Как на сайте: один образ, несколько вещей — каждая со своим фото, названием и ценой
+            </p>
+            <form id="packForm" class="adm-form">
+              <label class="adm-field">
+                <span>Название образа</span>
+                <input type="text" id="packTitle" placeholder="Шоколадный knit-комплект" required />
+              </label>
+              <div id="packPieces" class="pack-pieces"></div>
+              <button type="button" class="adm-btn-secondary" id="addPackPiece">+ Ещё вещь в образ</button>
+              <button type="submit" class="adm-submit" id="packSubmitBtn">Опубликовать образ</button>
+            </form>
+          </div>
+
+          <p class="adm-server-hint" id="serverHint" hidden>Запустите <code>start.bat</code></p>
+        </section>
+
+        <section class="adm-list-section">
+          <h2>В каталоге <span id="itemCount">0</span></h2>
+          <p class="adm-lead adm-lead--sm">Нажмите карточку для изменения</p>
+          <div class="adm-grid" id="itemGrid"></div>
+          <p class="adm-empty" id="emptyList" hidden>Пока пусто</p>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="adm-dialog" id="editDialog">
+      <form id="editForm" class="adm-dialog__box">
+        <button type="button" class="adm-dialog__x" id="editClose">×</button>
+        <h3 id="editDialogTitle">Изменить</h3>
+        <div id="editSingle">
+          <label class="adm-drop adm-drop--sm">
+            <input type="file" id="editPhoto" accept="image/*" hidden />
+            <img src="" alt="" id="editPreviewImg" class="adm-dialog__img" />
+            <span class="adm-drop__change">Заменить фото</span>
+          </label>
+          <label class="adm-field">
+            <span>Название</span>
+            <input type="text" id="editName" />
+          </label>
+          <label class="adm-field">
+            <span>Цена, ₽</span>
+            <input type="number" id="editPrice" min="0" step="100" />
+          </label>
+        </div>
+        <div id="editPack" hidden>
+          <label class="adm-field">
+            <span>Название образа</span>
+            <input type="text" id="editPackTitle" />
+          </label>
+          <div id="editPackPieces" class="pack-pieces"></div>
+        </div>
+        <div class="adm-dialog__actions">
+          <button type="submit" class="adm-submit adm-submit--sm">Сохранить</button>
+          <button type="button" class="adm-delete" id="editDelete">Удалить</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="adm-toast" id="toast"></div>
+    <script src="/js/admin.js" type="module"></script>
+  </body>
+</html>

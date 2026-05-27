@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MA BELLE showroom — женственный каталог одежды. Образы и отдельные вещи. Заказ в Telegram."
+    />
+    <title>MA BELLE showroom — каталог</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#" class="logo">
+          <img src="images/logo.png" alt="MA BELLE" class="logo__img" width="52" height="52" />
+          <span class="logo__text">
+            <span class="logo__main">MA BELLE</span>
+            <span class="logo__sub">showroom</span>
+          </span>
+        </a>
+        <nav class="nav">
+          <a href="#catalog">Каталог</a>
+          <a href="#how">Как заказать</a>
+          <a href="#footer">Контакты</a>
+        </nav>
+        <a href="#" class="btn btn--primary" id="headerTelegram" target="_blank" rel="noopener"
+          >Telegram</a
+        >
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <img
+          src="images/logo.png"
+          alt="MA BELLE showroom"
+          class="hero__logo"
+          width="280"
+          height="280"
+          loading="eager"
+        />
+        <h1 class="hero__title">MA BELLE <span style="font-family: var(--font-script); font-weight: 400">showroom</span></h1>
+        <p class="hero__slogan" id="heroSlogan">Загрузка…</p>
+        <a href="#catalog" class="btn btn--primary">Посмотреть каталог</a>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="container">
+        <h2 class="section-title">Каталог образов</h2>
+        <p class="section-sub">Каждый образ — набор вещей. Закажите комплект или отдельные элементы</p>
+        <div class="filters" id="filters"></div>
+        <div class="grid" id="catalogGrid"></div>
+        <p class="empty" id="catalogEmpty" hidden>Ничего не найдено в этой категории</p>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div class="container">
+        <h2 class="section-title">Как заказать</h2>
+        <p class="section-sub">Оформление через Telegram — быстро и удобно</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">1</div>
+            <h3>Выберите образ</h3>
+            <p>Откройте карточку и отметьте нужные вещи и размеры</p>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <h3>Нажмите «Заказать»</h3>
+            <p>Откроется Telegram с готовым текстом заказа</p>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <h3>Подтвердите в чате</h3>
+            <p>Мы ответим по наличию, доставке и оплате</p>
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 2rem">
+          <a href="#" class="btn btn--pink" id="howTelegram" target="_blank" rel="noopener"
+            >Написать в Telegram</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="container footer__grid">
+        <div>
+          <div class="footer__brand">showroom</div>
+          <p class="footer__note" id="footerDelivery"></p>
+          <p class="footer__note" id="footerReturn"></p>
+        </div>
+        <div>
+          <h4>Контакты</h4>
+          <p><a href="#" id="footerTelegram" target="_blank" rel="noopener">Telegram канал</a></p>
+          <p id="footerEmail"></p>
+        </div>
+        <div>
+          <h4>Каталог</h4>
+          <p><a href="#catalog">Смотреть образы</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="btn btn--primary fab" id="fabTelegram" target="_blank" rel="noopener"
+      >Заказать в Telegram</a
+    >
+
+    <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+      <div class="modal" role="dialog" aria-labelledby="modalTitle">
+        <button class="modal__close" id="modalClose" type="button" aria-label="Закрыть">×</button>
+        <div class="modal__inner">
+          <div class="modal__gallery">
+            <img src="" alt="" class="modal__main-img" id="modalMainImg" loading="lazy" />
+            <div class="modal__thumbs" id="modalThumbs"></div>
+          </div>
+          <div class="modal__content">
+            <h2 class="modal__title" id="modalTitle"></h2>
+            <p class="modal__desc" id="modalDesc"></p>
+            <div class="pieces-title">
+              <span id="piecesTitle">Состав образа</span>
+              <button type="button" class="select-all" id="selectAllPieces">Выбрать всё</button>
+            </div>
+            <div id="piecesList"></div>
+            <div class="order-summary">
+              <div class="order-summary__total" id="orderTotal">Итого: 0 ₽</div>
+              <div class="modal__actions">
+                <button type="button" class="btn btn--primary" id="orderSelected">
+                  Заказать выбранное в Telegram
+                </button>
+                <button type="button" class="btn btn--outline btn--sm" id="orderLookPhoto">
+                  Увеличить фото
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox__close" id="lightboxClose" type="button">×</button>
+      <img src="" alt="" id="lightboxImg" />
+    </div>
+
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>

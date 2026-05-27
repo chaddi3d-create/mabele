@@ -1,0 +1,322 @@
+{
+  "settings": {
+    "brandName": "MA BELLE",
+    "brandSub": "showroom",
+    "slogan": "Женственная мода с душой — закажите любимый образ в Telegram",
+    "telegramUrl": "https://t.me/Mabelle_Showroom_New",
+    "contactEmail": "hello@mabelle.show",
+    "deliveryNote": "Доставка по России и СНГ. Сроки и стоимость уточняем в Telegram после заказа.",
+    "returnNote": "Возврат в течение 14 дней при сохранении бирок и товарного вида.",
+    "adminPassword": "mabelle2025"
+  },
+  "categories": [
+    {
+      "id": "all",
+      "label": "Все"
+    },
+    {
+      "id": "obrazy",
+      "label": "Образы"
+    },
+    {
+      "id": "platya",
+      "label": "Платья"
+    },
+    {
+      "id": "kostyumy",
+      "label": "Костюмы"
+    },
+    {
+      "id": "aksessuary",
+      "label": "Аксессуары"
+    }
+  ],
+  "looks": [
+    {
+      "id": "look-k",
+      "slug": "chocolate-knit",
+      "title": "Шоколадный knit-комплект",
+      "category": "kostyumy",
+      "description": "Мягкий перфорированный трикотаж глубокого шоколадного оттенка. Каждую вещь можно заказать отдельно или собрать полный комплект.",
+      "heroImage": "k.png",
+      "gallery": [
+        "k.png",
+        "k1.png"
+      ],
+      "published": true,
+      "sortOrder": 1,
+      "pieces": [
+        {
+          "id": "piece-k",
+          "code": "k",
+          "name": "Топ knit pointelle",
+          "sku": "MB-K-01",
+          "price": 5900,
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "image": "k.png",
+          "type": "top",
+          "description": "Короткий топ с фактурной ажурной вязкой, округлый вырез."
+        },
+        {
+          "id": "piece-k1",
+          "code": "k1",
+          "name": "Поло-топ knit",
+          "sku": "MB-K-02",
+          "price": 6200,
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "image": "k1.png",
+          "type": "top",
+          "description": "Трикотажное поло с воротником и перфорацией."
+        },
+        {
+          "id": "piece-k2",
+          "code": "k2",
+          "name": "Шорты knit",
+          "sku": "MB-K-03",
+          "price": 4900,
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "image": "k1.png",
+          "type": "bottom",
+          "description": "Высокая посадка, завязка на талии, фактурный трикотаж."
+        }
+      ]
+    },
+    {
+      "id": "look-w",
+      "slug": "quiet-luxury-beige",
+      "title": "Образ quiet luxury",
+      "category": "kostyumy",
+      "description": "Кремовый total look с чёрным жакетом и акцентами. Соберите образ целиком или выберите отдельные вещи.",
+      "heroImage": "w5.png",
+      "gallery": [
+        "w5.png",
+        "w4.png",
+        "w3.png",
+        "w2.png",
+        "w.png"
+      ],
+      "published": true,
+      "sortOrder": 2,
+      "pieces": [
+        {
+          "id": "piece-w",
+          "code": "w",
+          "name": "Босоножки кожаные",
+          "sku": "MB-W-01",
+          "price": 6800,
+          "sizes": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "image": "w.png",
+          "type": "shoes",
+          "description": "Кожаные сандалии в стиле fisherman."
+        },
+        {
+          "id": "piece-w1",
+          "code": "w1",
+          "name": "Жакет укороченный чёрный",
+          "sku": "MB-W-02",
+          "price": 8900,
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "image": "w4.png",
+          "type": "outer",
+          "description": "Структурный укороченный жакет, матовая фактура."
+        },
+        {
+          "id": "piece-w2",
+          "code": "w2",
+          "name": "Сумка crossbody чёрная",
+          "sku": "MB-W-03",
+          "price": 4500,
+          "sizes": [
+            "ONE"
+          ],
+          "image": "w2.png",
+          "type": "accessory",
+          "description": "Полукруглая сумка с металлической пряжкой."
+        }
+      ]
+    },
+    {
+      "id": "look-b",
+      "slug": "rose-embroidered",
+      "title": "Платье с розами",
+      "category": "platya",
+      "description": "Воздушное платье с вышивкой роз на нежно-розовом фоне. Аксессуары из образа — отдельно.",
+      "heroImage": "b2.png",
+      "gallery": [
+        "b2.png",
+        "b1.png",
+        "b.png"
+      ],
+      "published": true,
+      "sortOrder": 3,
+      "pieces": [
+        {
+          "id": "piece-b2",
+          "code": "b2",
+          "name": "Платье макси с вышивкой",
+          "sku": "MB-B-01",
+          "price": 12500,
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "image": "b2.png",
+          "type": "dress",
+          "description": "Сорочка-халтер с цветочной вышивкой, полупрозрачный верх."
+        },
+        {
+          "id": "piece-b1",
+          "code": "b1",
+          "name": "Сумка crossbody",
+          "sku": "MB-B-02",
+          "price": 8900,
+          "sizes": [
+            "ONE"
+          ],
+          "image": "b1.png",
+          "type": "accessory",
+          "description": "Компактная сумка на цепочке."
+        },
+        {
+          "id": "piece-b",
+          "code": "b",
+          "name": "Туфли на каблуке",
+          "sku": "MB-B-03",
+          "price": 7200,
+          "sizes": [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "image": "b.png",
+          "type": "shoes",
+          "description": "Лаковые туфли с открытым носом."
+        }
+      ]
+    },
+    {
+      "id": "look-p",
+      "slug": "lavender-floral",
+      "title": "Лавандовый романтик",
+      "category": "obrazy",
+      "description": "Блуза с рюшами и юбка с цветочным принтом — нежный комплект для особых дней.",
+      "heroImage": "p3.png",
+      "gallery": [
+        "p3.png",
+        "p2.png",
+        "p1.png",
+        "p.png"
+      ],
+      "published": true,
+      "sortOrder": 4,
+      "pieces": [
+        {
+          "id": "piece-p1",
+          "code": "p1",
+          "name": "Блуза лавандовая с рюшами",
+          "sku": "MB-P-01",
+          "price": 7800,
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "image": "p1.png",
+          "type": "top",
+          "description": "Объёмные рукава, лёгкая полупрозрачная ткань."
+        },
+        {
+          "id": "piece-p2",
+          "code": "p2",
+          "name": "Юбка макси цветочная",
+          "sku": "MB-P-02",
+          "price": 6900,
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "image": "p2.png",
+          "type": "bottom",
+          "description": "Прямой крой, мелкий флористический принт."
+        },
+        {
+          "id": "piece-p",
+          "code": "p",
+          "name": "Клатч кремовый",
+          "sku": "MB-P-03",
+          "price": 4200,
+          "sizes": [
+            "ONE"
+          ],
+          "image": "p.png",
+          "type": "accessory",
+          "description": "Структурированный клатч с металлической застёжкой."
+        }
+      ]
+    },
+    {
+      "id": "look-1779635894231",
+      "slug": "апро-1779635894231",
+      "title": "апро",
+      "category": "obrazy",
+      "description": "",
+      "heroImage": "1779635894227-a8430e3d.jpg",
+      "gallery": [
+        "1779635894227-a8430e3d.jpg"
+      ],
+      "published": true,
+      "sortOrder": 5,
+      "pieces": [
+        {
+          "id": "piece-1779635894231",
+          "code": "1",
+          "name": "апро",
+          "sku": "MB-JX9GBB",
+          "price": 8000,
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "image": "1779635894227-a8430e3d.jpg",
+          "type": "top",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}
